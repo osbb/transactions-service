@@ -1,0 +1,39 @@
+{
+  "name": "transactions-service",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "main": "module.js",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js .",
+    "pretest": "npm run lint --silent",
+    "test": "mocha --require babel-register",
+    "coverage": "istanbul cover _mocha -- --require babel-register && istanbul check-coverage",
+    "start": "babel-node ./module.js"
+  },
+  "dependencies": {
+    "amqplib": "^0.4.2",
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.11.4",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "lodash": "^4.16.2",
+    "mongodb": "^2.2.4",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-register": "^6.14.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.1.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
+    "eslint-plugin-mocha": "^4.5.1",
+    "eslint-plugin-react": "^5.2.2",
+    "istanbul": "^1.0.0-alpha.2",
+    "mocha": "^3.0.2",
+    "pre-commit": "^1.1.3"
+  }
+}
